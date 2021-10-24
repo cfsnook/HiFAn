@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: ac.soton.hifan;singleton:=true
+Automatic-Module-Name: ac.soton.hifan
+Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: ac.soton.hifan,
+ ac.soton.hifan.impl,
+ ac.soton.hifan.util
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy

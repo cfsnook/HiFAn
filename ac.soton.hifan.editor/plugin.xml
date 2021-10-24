@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2021, 2021 University of Southampton.
+  
+  This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License 2.0
+  which accompanies this distribution, and is available at
+  https://www.eclipse.org/legal/epl-2.0/
+ 
+  SPDX-License-Identifier: EPL-2.0
+  
+  Contributors:
+  University of Southampton - initial API and implementation
+ 
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated hifan -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ac.soton.hifan.presentation.HifanModelWizardID"
+            name="%_UI_HifanModelWizard_label"
+            class="ac.soton.hifan.presentation.HifanModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/HifanModelFile.gif">
+         <description>%_UI_HifanModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated hifan -->
+      <editor
+            id="ac.soton.hifan.presentation.HifanEditorID"
+            name="%_UI_HifanEditor_label"
+            icon="icons/full/obj16/HifanModelFile.gif"
+            extensions="hifan"
+            class="ac.soton.hifan.presentation.HifanEditor"
+            contributorClass="ac.soton.hifan.presentation.HifanActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

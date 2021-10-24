@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="hifan" nsURI="http://soton.ac.uk/models/hifan/2021" nsPrefix="hifan">
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" upperBound="-1"
+        eType="#//Condition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Agent" eSuperTypes="#//Actor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainComponent" eSuperTypes="#//Component">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="failure" upperBound="-1"
+        eType="#//Failure" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalComponent" eSuperTypes="#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Assumption" eSuperTypes="#//Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Component" abstract="true" eSuperTypes="#//Actor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Action" eSuperTypes="#//LabeledElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" upperBound="-1"
+        eType="#//Condition" eOpposite="#//Condition/action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="error" upperBound="-1"
+        eType="#//Error" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition" eSuperTypes="#//LabeledElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+        eType="#//Action" eOpposite="#//Action/condition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" abstract="true" eSuperTypes="#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
+        eType="#//Action" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
+        eType="#//Actor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LabeledElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Failure" eSuperTypes="#//LabeledElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Error" eSuperTypes="#//LabeledElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ErrorType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="failure" eType="#//Failure"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mitigation" upperBound="-1"
+        eType="#//Mitigation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ErrorType">
+    <eLiterals name="NOTOCCURRING"/>
+    <eLiterals name="OCCURRING" value="1"/>
+    <eLiterals name="TIMING" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mitigation" eSuperTypes="#//LabeledElement"/>
+</ecore:EPackage>
