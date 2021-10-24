@@ -17,7 +17,6 @@ package ac.soton.hifan.impl;
 import ac.soton.hifan.Action;
 import ac.soton.hifan.Actor;
 import ac.soton.hifan.HifanPackage;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

@@ -9,14 +9,14 @@
     copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>hifan.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="Hifan" basePackage="ac.soton" resource="XMI" disposableProviderFactory="true"
+  <genPackages prefix="Hifan" basePackage="ac.soton" disposableProviderFactory="true"
       ecorePackage="hifan.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="hifan.ecore#//ErrorType">
       <genEnumLiterals ecoreEnumLiteral="hifan.ecore#//ErrorType/NOTOCCURRING"/>
       <genEnumLiterals ecoreEnumLiteral="hifan.ecore#//ErrorType/OCCURRING"/>
       <genEnumLiterals ecoreEnumLiteral="hifan.ecore#//ErrorType/TIMING"/>
     </genEnums>
-    <genClasses ecoreClass="hifan.ecore#//Entity">
+    <genClasses image="false" ecoreClass="hifan.ecore#//Entity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hifan.ecore#//Entity/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hifan.ecore#//Entity/condition"/>
     </genClasses>
@@ -27,7 +27,7 @@
     </genClasses>
     <genClasses ecoreClass="hifan.ecore#//PhysicalComponent"/>
     <genClasses ecoreClass="hifan.ecore#//Assumption"/>
-    <genClasses ecoreClass="hifan.ecore#//Component">
+    <genClasses image="false" ecoreClass="hifan.ecore#//Component">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hifan.ecore#//Component/purpose"/>
     </genClasses>
     <genClasses ecoreClass="hifan.ecore#//Action">
@@ -38,11 +38,11 @@
     <genClasses ecoreClass="hifan.ecore#//Condition">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hifan.ecore#//Condition/action"/>
     </genClasses>
-    <genClasses ecoreClass="hifan.ecore#//Actor">
+    <genClasses image="false" ecoreClass="hifan.ecore#//Actor">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hifan.ecore#//Actor/actions"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hifan.ecore#//Actor/input"/>
     </genClasses>
-    <genClasses ecoreClass="hifan.ecore#//LabeledElement">
+    <genClasses image="false" ecoreClass="hifan.ecore#//LabeledElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hifan.ecore#//LabeledElement/label"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hifan.ecore#//LabeledElement/description"/>
     </genClasses>

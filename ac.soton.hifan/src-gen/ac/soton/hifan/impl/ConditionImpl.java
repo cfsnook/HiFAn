@@ -17,7 +17,6 @@ package ac.soton.hifan.impl;
 import ac.soton.hifan.Action;
 import ac.soton.hifan.Condition;
 import ac.soton.hifan.HifanPackage;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 

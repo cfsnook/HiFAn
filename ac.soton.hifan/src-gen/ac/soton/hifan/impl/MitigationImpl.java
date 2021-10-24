@@ -16,7 +16,6 @@ package ac.soton.hifan.impl;
 
 import ac.soton.hifan.HifanPackage;
 import ac.soton.hifan.Mitigation;
-
 import org.eclipse.emf.ecore.EClass;
 
 /**

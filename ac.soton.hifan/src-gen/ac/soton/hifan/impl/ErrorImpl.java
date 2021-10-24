@@ -18,7 +18,6 @@ import ac.soton.hifan.ErrorType;
 import ac.soton.hifan.Failure;
 import ac.soton.hifan.HifanPackage;
 import ac.soton.hifan.Mitigation;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

@@ -17,7 +17,6 @@ package ac.soton.hifan.provider;
 import ac.soton.hifan.Entity;
 import ac.soton.hifan.HifanFactory;
 import ac.soton.hifan.HifanPackage;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -116,17 +115,6 @@ public class EntityItemProvider extends ItemProviderAdapter implements IEditingD
 		// adding (see {@link AddCommand}) it as a child.
 
 		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns Entity.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Entity"));
 	}
 
 	/**

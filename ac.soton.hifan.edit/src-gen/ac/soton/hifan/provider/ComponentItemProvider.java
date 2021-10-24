@@ -16,7 +16,6 @@ package ac.soton.hifan.provider;
 
 import ac.soton.hifan.Component;
 import ac.soton.hifan.HifanPackage;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -75,17 +74,6 @@ public class ComponentItemProvider extends ActorItemProvider {
 								"_UI_Component_type"),
 						HifanPackage.Literals.COMPONENT__PURPOSE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This returns Component.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Component"));
 	}
 
 	/**

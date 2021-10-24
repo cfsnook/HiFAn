@@ -18,7 +18,6 @@ import ac.soton.hifan.Action;
 import ac.soton.hifan.Component;
 import ac.soton.hifan.Condition;
 import ac.soton.hifan.HifanPackage;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

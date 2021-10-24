@@ -16,7 +16,6 @@ package ac.soton.hifan.provider;
 
 import ac.soton.hifan.HifanFactory;
 import ac.soton.hifan.HifanPackage;
-
 import java.util.Collection;
 import java.util.List;
 

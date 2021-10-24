@@ -18,7 +18,6 @@ import ac.soton.hifan.DomainComponent;
 import ac.soton.hifan.Entity;
 import ac.soton.hifan.Failure;
 import ac.soton.hifan.HifanPackage;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

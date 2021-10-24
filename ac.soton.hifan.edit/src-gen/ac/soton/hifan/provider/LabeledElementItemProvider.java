@@ -16,7 +16,6 @@ package ac.soton.hifan.provider;
 
 import ac.soton.hifan.HifanPackage;
 import ac.soton.hifan.LabeledElement;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -101,17 +100,6 @@ public class LabeledElementItemProvider extends ItemProviderAdapter implements I
 								"_UI_LabeledElement_type"),
 						HifanPackage.Literals.LABELED_ELEMENT__DESCRIPTION, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This returns LabeledElement.gif.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/LabeledElement"));
 	}
 
 	/**
