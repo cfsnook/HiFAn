@@ -1,11 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" name="hifan" version="12.0.0.2017041100">
-  <ownedViewpoints documentation="A Hifan analysis" endUserDocumentation="A Hifan analysis" name="hifan.anl" label="Hifan Analysis" modelFileExtension="hifan">
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" documentation="The Abstract Control Diagram for a Hifan analysis" endUserDocumentation="The Abstract Control Diagram for a Hifan analysis" name="hifan.acd" label="Abstract Control Diagram" titleExpression="aql:self.name " initialisation="true" domainClass="hifan::DomainComponent" preconditionExpression="aql:self.children->size()>0" enablePopupBars="true">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="hifan" version="12.0.0.2017041100">
+  <ownedViewpoints documentation="The Abstract Control Diagram for a Hifan analysis" endUserDocumentation="The Abstract Control Diagram for a Hifan analysis" name="hifan.anl" label="Hifan Analysis (runtime)" modelFileExtension="hifan">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="hifan.acd" label="Abstract Control Diagram" titleExpression="aql:self.name + ' abstract control diagram'" initialisation="true" domainClass="hifan::DomainComponent" preconditionExpression="aql:self.entities->size()>0" enablePopupBars="true">
       <metamodel href="http://soton.ac.uk/models/hifan/2021#/"/>
-      <defaultLayer name="Default"/>
+      <layout xsi:type="description_1:CompositeLayout"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="hifan.PhysicalComponent.node" label="Physical Component node" domainClass="hifan::PhysicalComponent">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="Create a physical component" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="hifan.Agent.node" label="Agent node" domainClass="hifan::Agent">
+          <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="Create an agent" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="18" verticalDiameterComputationExpression="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="hifan.Assumption.node" label="Assumption node" domainClass="hifan::Assumption">
+          <style xsi:type="style:NoteDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="'Create a new assumption'" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="hifan.DomainComponent.node" label="Domain Component node" domainClass="hifan::DomainComponent">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="Create a domain component" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='chocolate']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="hifan.creation.tools" label="Create new..">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="hifan.DomainComponent.node.creation" label="DomainComponent" nodeMappings="//@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.DomainComponent.node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="hifan::DomainComponent" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="hifan.PhysicalComponent.node.creation" label="Physical  Component" nodeMappings="//@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.PhysicalComponent.node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="hifan::PhysicalComponent" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="hifan.Agent.node.creation" label="Agent" nodeMappings="//@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.Agent.node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="hifan::Agent" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="hifan.Assumption.node.creation" label="Assumption" nodeMappings="//@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.Assumption.node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="hifan::Assumption" referenceName="entities"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" documentation="Component hierarchy for a Hifan analysis" endUserDocumentation="Component hierarchy for a Hifan analysis" name="hifan.hier" label="Component hierarchy" titleExpression="aql:self.name+' component hierarchy'" initialisation="true" showOnStartup="true" domainClass="hifan::DomainComponent" preconditionExpression="aql:self.entities->size()>0">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="hifan.hier" label="Component hierarchy" titleExpression="aql:self.name+' component hierarchy'" initialisation="true" showOnStartup="true" domainClass="hifan::DomainComponent" preconditionExpression="aql:self.entities->size()>0">
       <metamodel href="http://soton.ac.uk/models/hifan/2021#/"/>
       <subItemMappings name="hifan.hier.domain" label="Domain component hierarchy" domainClass="hifan::DomainComponent" semanticCandidatesExpression="feature:entities" reusedTreeItemMappings="//@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.hier']/@subItemMappings[name='hifan.hier.domain'] //@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.hier']/@subItemMappings[name='hifan.hier.physical']">
         <defaultStyle>
