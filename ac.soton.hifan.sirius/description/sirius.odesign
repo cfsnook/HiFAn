@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" name="hifan" version="12.0.0.2017041100">
+  <ownedViewpoints documentation="A Hifan analysis" endUserDocumentation="A Hifan analysis" name="hifan.anl" label="Hifan Analysis" modelFileExtension="hifan">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" documentation="The Abstract Control Diagram for a Hifan analysis" endUserDocumentation="The Abstract Control Diagram for a Hifan analysis" name="hifan.acd" label="Abstract Control Diagram" titleExpression="aql:self.name " initialisation="true" domainClass="hifan::DomainComponent" preconditionExpression="aql:self.children->size()>0" enablePopupBars="true">
+      <metamodel href="http://soton.ac.uk/models/hifan/2021#/"/>
+      <defaultLayer name="Default"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" documentation="Component hierarchy for a Hifan analysis" endUserDocumentation="Component hierarchy for a Hifan analysis" name="hifan.hier" label="Component hierarchy" titleExpression="aql:self.name+' component hierarchy'" initialisation="true" showOnStartup="true" domainClass="hifan::DomainComponent" preconditionExpression="aql:self.entities->size()>0">
+      <metamodel href="http://soton.ac.uk/models/hifan/2021#/"/>
+      <subItemMappings name="hifan.hier.domain" label="Domain component hierarchy" domainClass="hifan::DomainComponent" semanticCandidatesExpression="feature:entities" reusedTreeItemMappings="//@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.hier']/@subItemMappings[name='hifan.hier.domain'] //@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.hier']/@subItemMappings[name='hifan.hier.physical']">
+        <defaultStyle>
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+      </subItemMappings>
+      <subItemMappings name="hifan.hier.physical" label="Physical component hierarchy" domainClass="hifan::PhysicalComponent" semanticCandidatesExpression="feature:entities">
+        <defaultStyle>
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+      </subItemMappings>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" name="hifan" version="12.0.0.2017041100">
+  <ownedViewpoints documentation="The Abstract Control Diagram for a Hifan analysis" endUserDocumentation="The Abstract Control Diagram for a Hifan analysis" name="hifan.anl" label="Hifan Analysis" modelFileExtension="hifan">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="hifan.acd" label="Abstract Control Diagram" titleExpression="aql:self.name " initialisation="true" domainClass="hifan::DomainComponent" preconditionExpression="aql:self.children->size()>0" enablePopupBars="true">
+      <metamodel href="../../ac.soton.hifan/model/hifan.ecore#/"/>
+      <defaultLayer name="Default"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="hifan.hier" label="Hierarchy" initialisation="true" showOnStartup="true" domainClass="hifan::Entity"/>
+    <ownedJavaExtensions qualifiedClassName="ac.soton.hifan.sirius.Services"/>
+  </ownedViewpoints>
+</description:Group>
