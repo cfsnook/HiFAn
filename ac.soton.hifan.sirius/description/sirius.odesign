@@ -6,28 +6,28 @@
       <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
         <nodeMappings name="hifan.PhysicalComponent.node" label="Physical Component node" domainClass="hifan::PhysicalComponent">
-          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="Create a physical component" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="'physical component'" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="hifan.Agent.node" label="Agent node" domainClass="hifan::Agent">
-          <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="Create an agent" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="18" verticalDiameterComputationExpression="12">
+          <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="'agent'" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="18" verticalDiameterComputationExpression="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="hifan.Assumption.node" label="Assumption node" domainClass="hifan::Assumption">
-          <style xsi:type="style:NoteDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="'Create a new assumption'" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:NoteDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="'assumption'" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="hifan.DomainComponent.node" label="Domain Component node" domainClass="hifan::DomainComponent">
-          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="Create a domain component" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" tooltipExpression="'domain component'" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW" width="18" height="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='chocolate']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
