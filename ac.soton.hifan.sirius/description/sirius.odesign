@@ -34,6 +34,14 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
+        <edgeMappings name="hifan.action.edge" label="Action" sourceMapping="//@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.DomainComponent.node'] //@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.Agent.node'] //@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.PhysicalComponent.node']" targetMapping="//@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.PhysicalComponent.node'] //@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.DomainComponent.node']" targetFinderExpression="feature:target" sourceFinderExpression="aql:self.eContainer()" domainClass="hifan::Action" useDomainElement="true">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            <centerLabelStyleDescription labelSize="12" labelExpression="aql:self.label+self.condition.label->sep('[', ',', ']')">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <toolSections name="hifan.creation.tools" label="Create new..">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="hifan.DomainComponent.node.creation" label="DomainComponent" nodeMappings="//@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.DomainComponent.node']">
             <variable name="container"/>
