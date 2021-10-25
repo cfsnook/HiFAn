@@ -43,7 +43,7 @@
           </style>
         </edgeMappings>
         <toolSections name="hifan.creation.tools" label="Create new..">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="hifan.DomainComponent.node.creation" label="DomainComponent" nodeMappings="//@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.DomainComponent.node']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="hifan.DomainComponent.node.creation" label="Domain Component" nodeMappings="//@ownedViewpoints[name='hifan.anl']/@ownedRepresentations[name='hifan.acd']/@defaultLayer/@nodeMappings[name='hifan.DomainComponent.node']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
